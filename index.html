@@ -8,30 +8,67 @@
   </head>
   <body>
     <form class="form" action="./Textfile.txt" method="GET">
-      <h2>Login</h2>
+      <h2>Registration</h2>
+
+      <label
+        >Type your name:
+        <input type="text"
+        placeholder="name"
+        name="name"
+        autofocus />
+      </label>
 
       <label
         >Type your email:
         <input
-          type="text"
+          type="email"
           placeholder="email"
           name="email"
-          id="email"
           autofocus
           pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
         />
       </label>
+
       <label
         >Type your password:
         <input
           type="text"
-          placeholder="password"
+          placeholder="BE STRONG"
           name="password"
-          id="password"
+          pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
         />
       </label>
 
-      <button type="submit">Login!</button>
+      <label
+        >Type your phone number:
+        <input
+          type="tel"
+          placeholder="phone number"
+          name="tel"
+          pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+        />
+      </label>
+
+      <label
+        >Type your address:
+        <input
+          type="text"
+          placeholder="city, street, house etc."
+          name="address"
+        />
+      </label>
+
+      <label
+        >Type your date of birthday:
+        <input
+          type="date"
+          placeholder="date"
+          name="date"
+          pattern="(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})"
+        />
+    </label>
+
+      <button type="submit">Register</button>
       <button type="reset">Reset</button>
     </form>
   </body>
