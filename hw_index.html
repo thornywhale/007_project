@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/hw_style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Feedback form</h1>
+    <form>
+      <fieldset>
+        <legend>Personal data</legend>
+
+        <label>
+          Name:
+          <input type="text" name="username" placeholder="John" autofocus />
+        </label>
+
+        <label>
+          Email:
+          <input
+            type="text"
+            name="email"
+            placeholder="example@email.com"
+            pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+            required
+          />
+        </label>
+
+        <label>
+          Birth date:
+          <input type="date" name="birthdate" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sex</legend>
+        <label>
+          <input type="radio" value="Male" name="gender" />
+          Male
+        </label>
+        <label>
+          <input type="radio" value="Female" name="gender" />
+          Female
+        </label>
+        <label>
+          <input type="radio" value="Other" name="gender" />
+          Other
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional</legend>
+        <label>
+          <input type="checkbox" name="isSubscribed" />
+          Subscribe to mailing list
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend class="hobby">Choose your hobby</legend>
+        <input type="text" name="hobby" list="hobby-list" />
+
+        <datalist id="hobby-list">
+          <optgroup label="sport">
+            <option value="chess">sport</option>
+            <option value="boxing">sport</option>
+            <option value="swimming">sport</option>
+          </optgroup>
+          <option value="collectioning magnets">collectioning</option>
+        </datalist>
+      </fieldset>
+
+      <fieldset>
+        <legend>How did you find out about us?</legend>
+        <label>
+          <input type="radio" value="friends" name="way" />
+          Friends, family, colleagues etc.
+        </label>
+        <label>
+          <input type="radio" value="socialmeadia" name="way" />
+          Social media
+        </label>
+        <label>
+          <input type="radio" value="ads" name="way" checked />
+          Advertising
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>We need your feedback!</legend>
+        <label>
+          <textarea name="text" cols="40" rows="10" maxlength="100"></textarea>
+        </label>
+      </fieldset>
+
+      <button class="button" type="submit">Send</button>
+    </form>
+  </body>
+</html>
