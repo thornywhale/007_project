@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/hw_style.css" />
-    <title>Document</title>
+    <title>FF</title>
   </head>
 
   <body>
-    <h1>Feedback form</h1>
+    <h1>Feedback Form</h1>
     <form>
       <fieldset>
         <legend>Personal data</legend>
 
         <label>
           Name:
-          <input type="text" name="username" placeholder="John" autofocus />
+          <input type="text" name="username" placeholder="John" autofocus required />
         </label>
 
         <label>
@@ -32,7 +32,7 @@
 
         <label>
           Birth date:
-          <input type="date" name="birthdate" />
+          <input type="date" name="birthdate" required />
         </label>
       </fieldset>
 
@@ -55,7 +55,7 @@
       <fieldset>
         <legend>Additional</legend>
         <label>
-          <input type="checkbox" name="isSubscribed" />
+          <input type="checkbox" name="isSubscribed" value="true" />
           Subscribe to mailing list
         </label>
       </fieldset>
@@ -70,7 +70,10 @@
             <option value="boxing">sport</option>
             <option value="swimming">sport</option>
           </optgroup>
-          <option value="collectioning magnets">collectioning</option>
+          <optgroup label="collectioning">
+            <option value="collectioning coins">collectioning</option>
+            <option value="collectioning magnets">collectioning</option>
+          </optgroup>
         </datalist>
       </fieldset>
 

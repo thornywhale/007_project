@@ -1,9 +1,9 @@
 body{
-  text-align: center;
   background-color: beige;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h1{
+  text-align: center;
   font-size: 24px;
 }
 form {
@@ -23,6 +23,9 @@ legend {
 label{
   display: flex;
 }
+input{
+  margin-left: 3vw;
+}
 textarea {
-  resize: inherit;
+  resize: none;
 }
